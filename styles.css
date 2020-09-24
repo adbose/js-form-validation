@@ -60,11 +60,29 @@ body {
     width: 100%;
 }
 
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
 .form-control i {
-    position: absolute;
+    position: absolute;  /* this means the i is absolute to it's ancestor form-control element which is relative */
     top: 40px;
     right: 10px;
     visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: #2ecc71;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color:#e74c3c;
 }
 
 .form-control small {
@@ -72,6 +90,11 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: #e74c3c;
 }
 
 .form button {
@@ -86,3 +109,4 @@ body {
     padding: 10px;
     width: 100%;
 }
+
